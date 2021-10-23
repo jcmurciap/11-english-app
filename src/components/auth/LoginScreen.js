@@ -1,18 +1,19 @@
 import React from 'react';
 import { Container, Box, Typography, Avatar, TextField, Button, Divider } from '@mui/material';
-import SendIcon from '@mui/icons-material/Send';
 import './login.css';
 
 
-// #TODO Create-a-new-account / renew-password
 export const LoginScreen = () => {
     return (
         <Container
-            disableGutters="true"
+            disableGutters='true'
+            fixed='true'
             sx={{
                 height: "100vh",
+                width: "100%",
                 margin: "0",
                 display: "flex",
+                // maxWidth: "1351px",
             }}
         >
             <Box 
@@ -24,15 +25,14 @@ export const LoginScreen = () => {
                     height: "100vh",
                 }} 
             />
-            
             <Box
                 sx={{
-                    boxShadow: "0px 0px 3px 3px lightgray",
+                    boxShadow: "0px 0px 3px 3px #1976d2",
                     borderRadius: "4vh",
                     height: "70vh",
                     padding: "2vw",
                     marginTop: "10vh",
-                    marginLeft: '5vw'
+                    marginLeft: '5vw',
                 }}
             >
                 <Box>
@@ -64,9 +64,10 @@ export const LoginScreen = () => {
                 <Box>
                     <TextField id="outlined-basic" label="Email" variant="outlined" sx={{width: "100%"}}/>
                     <TextField 
-                        id="outlined-basic" 
-                        label="Password" 
-                        variant="outlined" 
+                        id="outlined-password-input"
+                        label="Password"
+                        type="password"
+                        autoComplete="current-password" 
                         sx={{
                             width: "100%",
                             marginTop: "1vh"
