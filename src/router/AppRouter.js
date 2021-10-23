@@ -8,6 +8,8 @@ import {
     Redirect,
   } from "react-router-dom";
 import { LoginScreen } from '../components/auth/LoginScreen';
+import { RenewPassword } from '../components/auth/RenewPassword';
+import { SignoutScreen } from '../components/auth/SignoutScreen';
 import { EnglishScreen } from '../components/english/EnglishScreen';
 
 
@@ -20,6 +22,14 @@ export const AppRouter = () => {
                     <Route 
                         component={ LoginScreen }
                         exact path="/login"
+                    />
+                    <Route 
+                        component={ SignoutScreen }
+                        exact path="/signout"
+                    />
+                    <Route 
+                        component={ RenewPassword }
+                        exact path="/renew"
                     />
                     
                     {/* private route */}
