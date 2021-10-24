@@ -7,6 +7,7 @@ import {
     Route,
     Redirect,
   } from "react-router-dom";
+import { StyledEngineProvider } from '@mui/material/styles';
 import { LoginScreen } from '../components/auth/LoginScreen';
 import { RenewPassword } from '../components/auth/RenewPassword';
 import { SignoutScreen } from '../components/auth/SignoutScreen';
@@ -20,7 +21,7 @@ export const AppRouter = () => {
                 <Switch>
                     {/* public route */}
                     <Route 
-                        component={ LoginScreen }
+                        component={LoginScreen}
                         exact path="/login"
                     />
                     <Route 
