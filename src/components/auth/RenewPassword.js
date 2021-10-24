@@ -1,5 +1,12 @@
 import React from 'react'
-import { Container, Box, Typography, TextField, Button, Divider } from '@mui/material';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import './login.css';
+
 
 export const RenewPassword = () => {
     return (
@@ -11,24 +18,23 @@ export const RenewPassword = () => {
         >
             <Box
                 sx={{
-                    boxShadow: "0px 0px 3px 3px #1976d2",
                     borderRadius: "4vh",
-                    minWidth: "290px",
-                    maxWidth: "380px",   
-                    width: "40vw",
+                    boxShadow: "0px 0px 3px 3px #1976d2",
                     height: "auto",
-                    padding: "2vw",
                     marginTop: "15vh",
-                    
+                    maxWidth: "380px",   
+                    minWidth: "290px",
+                    padding: "2vw",
+                    width: "40vw",
                 }}
             >
                 <Typography 
-                        variant="h5" 
-                        gutterBottom 
                         component="div"
+                        gutterBottom 
                         sx={{
                             textAlign: "center",
                         }}
+                        variant="h5" 
                 >
                     Reset your password
                 </Typography>
@@ -36,42 +42,41 @@ export const RenewPassword = () => {
                 <TextField 
                     id="outlined-basic" 
                     label="Email"
-                    variant="outlined" 
                     sx={{
+                        mt: "3vh",
                         width: "100%", 
-                        marginTop: "3vh"
-                        }}
-                    />
+                    }}
+                    variant="outlined" 
+                />
                 <TextField 
+                    autoComplete="current-password" 
                     id="outlined-password-input"
                     label="New Password"
-                    type="password"
-                    autoComplete="current-password" 
                     sx={{
+                        marginTop: "1vh",
                         width: "100%",
-                        marginTop: "1vh"
                     }}
+                    type="password"
                 />
                 <TextField 
+                    autoComplete="current-password" 
                     id="outlined-password-input"
                     label="Confirm new Password"
-                    type="password"
-                    autoComplete="current-password" 
                     sx={{
+                        marginTop: "1vh",
                         width: "100%",
-                        marginTop: "1vh"
                     }}
+                    type="password"
                 />
                 <Button 
-                    variant="outlined"
                     sx={{
                         width: "100%",
-                        marginTop: "5vh",
-                        marginBottom: "2vh",
+                        mt: "5vh",
+                        mb: "2vh",
                     }}
-
+                    variant="outlined"
                 >
-                    Confirm password change
+                    Continue
                 </Button>
             </Box>
         </Container>
