@@ -1,114 +1,98 @@
 import React from 'react';
-import { Container, Box, Typography, Avatar, TextField, Button, Divider } from '@mui/material';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
 import './login.css';
 
-
 export const LoginScreen = () => {
-    return (
+    return(
         <Container
-            disableGutters='true'
-            fixed='true'
             sx={{
-                height: "100vh",
-                width: "100%",
-                margin: "0",
+                border: "0",
                 display: "flex",
-                // maxWidth: "1351px",
+                height: "100vh",
+                justifyContent: "center",
+                margin: "0",
             }}
-        >
+            >           
             <Box 
-                component="img"
                 alt="child"
+                component="img"
                 src="https://a9p9n2x2.stackpathcdn.com/wp-content/blogs.dir/1/files/2018/09/iStock-824777726-e1537981342941.jpg"
-                sx={{
-                    width: "60%",
-                    height: "100vh",
-                }} 
+                sx={{ width: "60%" }}
             />
             <Box
                 sx={{
-                    boxShadow: "0px 0px 3px 3px #1976d2",
                     borderRadius: "4vh",
-                    height: "70vh",
-                    padding: "2vw",
-                    marginTop: "10vh",
-                    marginLeft: '5vw',
+                    boxShadow: "5px 3px 20px #1976d2",
+                    height: "70%",
+                    marginLeft: "5vw",
+                    maxWidth: "400px",
+                    minWidth: "300px",
+                    mt: "8vh",
+                    p: "2vw",
+                    width: "30%",
                 }}
             >
-                <Box>
-                    <Typography 
-                        variant="h3"
-                        gutterBottom 
-                        component="div"
-                        sx={{
-                            textAlign: "center",
-                            fontFamily: "'Butterfly Kids', cursive",
-                            fontSize: "10vh"
-                        }}
-                    >
-                        English Practice
-                    </Typography>
-                </Box>
-                <Box
+                <Typography 
+                    component="div"
+                    gutterBottom 
                     sx={{
-                        display:"flex",
-                        justifyContent: "center"}}
-                    
+                        fontFamily: "'Butterfly Kids', cursive",
+                        fontSize: "8vh",
+                        textAlign: "center",
+                    }}
+                    variant="h3"
                 >
-                    <Avatar
-                        alt="profileImage"
-                        src="https://placekitten.com/100/100"
-                        sx={{ width: 70, height: 70, marginBottom: 2}} 
-                    />
-                </Box>
+                    English Practice
+                </Typography>
+                <Avatar
+                    alt="profileImage"
+                    src="https://placekitten.com/100/100"
+                    sx={{ 
+                        height: 70, 
+                        marginX: "auto", 
+                        mb: 2,
+                        width: 70, 
+                    }} 
+                />
                 <Box>
-                    <TextField id="outlined-basic" label="Email" variant="outlined" sx={{width: "100%"}}/>
                     <TextField 
+                        id="outlined-basic" 
+                        label="Email" 
+                        sx={{ width: "100%" }}
+                        variant="outlined" 
+                    />
+                    <TextField 
+                        autoComplete="current-password" 
                         id="outlined-password-input"
                         label="Password"
+                        sx={{ width: "100%", marginTop: "1vh" }}
                         type="password"
-                        autoComplete="current-password" 
-                        sx={{
-                            width: "100%",
-                            marginTop: "1vh"
-                        }}
                     />
                 </Box>
-                <Box>
-                    <Button 
-                        variant="contained" 
-                        sx={{
-                            width: "100%",
-                            marginTop: "1vh"
-                        }}
-                    >
-                        Continue
-                    </Button>
-                </Box>
-                <Box
-                    sx={{
-                        marginTop: "7vh"
-                    }}
+                <Button 
+                    sx={{ width: "100%", marginTop: "1vh" }}
+                    variant="contained" 
                 >
-                    <Divider
-                        sx={{
-                            fontFamily: "Roboto,Helvetica,Arial,sans-serif",
-                            color: "grey"
-                        }}
-                    >New to English Practice?</Divider>
-                    <Button 
-                        variant="outlined"
-                        sx={{
-                            width: "100%",
-                            marginTop: "2vh",
-                        }}
-
-                    >
-                        Create an account
-                    </Button>
-                </Box>
+                    Continue
+                </Button>
+                <Divider
+                    sx={{ marginTop: "5vh" }}
+                >
+                    New to English Practice?
+                </Divider>
+                <Button 
+                    sx={{ width: "100%", marginTop: "2vh" }}
+                    variant="outlined"
+                >
+                    Create an account
+                </Button>    
             </Box>
-            
-        </Container>
+        </Container>                
     );
 };
