@@ -12,17 +12,8 @@ export const LoginScreen = () => {
     return(
         <Box
         sx={{ 
-            display: "flex",
-            flexGrow: 1, 
+            display: "flex" 
         }}
-            // DisableGutters="true"
-            // sx={{
-            //     border: "0",
-            //     display: "flex",
-            //     height: "100vh",
-            //     justifyContent: "center",
-            //     margin: "0",
-            // }}
         >           
             <Box 
                 alt="child"
