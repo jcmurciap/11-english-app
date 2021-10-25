@@ -10,7 +10,7 @@ import './login.css';
 
 export const RenewPassword = () => {
     return (
-        <Container
+        <Box
             sx={{
                 display: "flex",    
                 justifyContent: "center",
@@ -79,6 +79,6 @@ export const RenewPassword = () => {
                     Continue
                 </Button>
             </Box>
-        </Container>
+        </Box>
     );
 };

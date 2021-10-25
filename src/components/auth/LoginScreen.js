@@ -10,15 +10,20 @@ import './login.css';
 
 export const LoginScreen = () => {
     return(
-        <Container
-            sx={{
-                border: "0",
-                display: "flex",
-                height: "100vh",
-                justifyContent: "center",
-                margin: "0",
-            }}
-            >           
+        <Box
+        sx={{ 
+            display: "flex",
+            flexGrow: 1, 
+        }}
+            // DisableGutters="true"
+            // sx={{
+            //     border: "0",
+            //     display: "flex",
+            //     height: "100vh",
+            //     justifyContent: "center",
+            //     margin: "0",
+            // }}
+        >           
             <Box 
                 alt="child"
                 component="img"
@@ -93,6 +98,6 @@ export const LoginScreen = () => {
                     Create an account
                 </Button>    
             </Box>
-        </Container>                
+        </Box>                
     );
 };

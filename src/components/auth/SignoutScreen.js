@@ -11,7 +11,7 @@ import './login.css';
 
 export const SignoutScreen = () => {
     return (
-        <Container sx={{ display: "flex", justifyContent: "center" }}>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box
                 sx={{
                     borderRadius: "4vh",
@@ -69,6 +69,6 @@ export const SignoutScreen = () => {
                     <GoogleIcon />
                 </Box>    
             </Box>
-        </Container>
+        </Box>
     );
 };
