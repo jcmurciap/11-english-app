@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-
 import { styled, alpha } from "@mui/material/styles";
 import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
 import Menu from '@mui/material/Menu';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import Avatar from '@mui/material/Avatar';
 import Badge from '@mui/material/Badge';
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -16,8 +16,8 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreIcon from "@mui/icons-material/More";
-
 import '../auth/login.css';
+import { LessonButtons } from './LessonButtons';
 
 //box search
 const Search = styled('div')(({ theme }) => ({
@@ -126,14 +126,14 @@ export const PrimarySearchNavbar = () => {
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
         > 
-            <MenuItem>
+            {/* <MenuItem>
               <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                 <Badge badgeContent={2} color="error">
                   <MailIcon />
                 </Badge>
               </IconButton>
               <p>Messages</p>
-            </MenuItem>
+            </MenuItem> */}
             
             <MenuItem>
               <IconButton
@@ -172,12 +172,14 @@ export const PrimarySearchNavbar = () => {
                         edge="start"
                         color="inherit"
                         aria-label="open drawer"
-                        sx={{ mr: 2 }}
+                        sx={{ mr: 1 }}
                     >
                         <MenuIcon />
                     </IconButton>
-					<img
-						src="../images/my_logo.png" //BUG
+					<Avatar
+                        alt="main-logo"
+						src="../images/my_logo.png"
+                        sx={{ mr: 2 }}
 					/>					
 					<Search>
                         <SearchIconWrapper>                            
@@ -192,11 +194,6 @@ export const PrimarySearchNavbar = () => {
                     <Box sx={{ flexGrow: 1}} />
                     <Box sx={{ display: { xs: "none", md: "flex" } }}>
                         
-						<Button variant="text" sx={{ color: "inherit" }}>
-							<Badge badgeContent={3} color="error">
-								News  	
-                        	</Badge>
-						</Button>
 						<Button variant="text" sx={{color: "#fff"}}>
 							Lesssons	
 						</Button>
@@ -207,7 +204,7 @@ export const PrimarySearchNavbar = () => {
 							Blog	
 						</Button>
 						
-						<IconButton
+						{/* <IconButton
                             size="large"
                             aria-label="show 4 new mails"
                             color="inherit"
@@ -215,7 +212,7 @@ export const PrimarySearchNavbar = () => {
                         	<Badge badgeContent={2} color="error">
 								<MailIcon />
                         	</Badge>
-                        </IconButton>
+                        </IconButton> */}
                         
 						<IconButton
                             size="large"
@@ -255,6 +252,7 @@ export const PrimarySearchNavbar = () => {
             </AppBar>
             {renderMobileMenu}
             {renderMenu}
+            <LessonButtons />
         </Box>
     );
 };
