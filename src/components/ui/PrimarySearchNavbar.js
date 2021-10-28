@@ -10,7 +10,6 @@ import Badge from '@mui/material/Badge';
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from '@mui/material/IconButton';
-import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -87,7 +86,7 @@ export const PrimarySearchNavbar = () => {
     };
 
     const menuId = "primary-search-account-menu";
-    const renderMenu = (
+    const renderDesktopMenu = (
         <Menu
             anchorEl={anchorEl}
             anchorOrigin={{
@@ -126,21 +125,12 @@ export const PrimarySearchNavbar = () => {
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
         > 
-            {/* <MenuItem>
-              <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                <Badge badgeContent={2} color="error">
-                  <MailIcon />
-                </Badge>
-              </IconButton>
-              <p>Messages</p>
-            </MenuItem> */}
-            
             <MenuItem>
-              <IconButton
-                size="large"
-                aria-label="show 17 new notifications"
-                color="inherit"
-              >
+                <IconButton
+                    size="large"
+                    aria-label="show 17 new notifications"
+                    color="inherit"
+                >
                 <Badge badgeContent={1} color="error">
                     <NotificationsIcon />
                 </Badge>
@@ -204,17 +194,7 @@ export const PrimarySearchNavbar = () => {
 							Blog	
 						</Button>
 						
-						{/* <IconButton
-                            size="large"
-                            aria-label="show 4 new mails"
-                            color="inherit"
-                    	>
-                        	<Badge badgeContent={2} color="error">
-								<MailIcon />
-                        	</Badge>
-                        </IconButton> */}
-                        
-						<IconButton
+                        <IconButton
                             size="large"
                             aria-label="show 17 new notifications"
                             color="inherit"
@@ -251,7 +231,7 @@ export const PrimarySearchNavbar = () => {
 				</Toolbar>
             </AppBar>
             {renderMobileMenu}
-            {renderMenu}
+            {renderDesktopMenu}
             <LessonButtons />
         </Box>
     );
