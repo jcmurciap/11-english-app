@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { LessonButtonsGames } from './LessonButtonsGames';
+import { LessonVocabulary } from './LessonVocabulary';
 
 const images = [
     {
@@ -18,7 +18,7 @@ const images = [
     },
     {
         url: 'https://www.psychbytes.com/dev/wp-content/uploads/2017/04/AdobeStock_40771403.jpeg',
-        title: "Putting correct word",
+        title: "Schedule my learning path",
         width: "30%",
     },
 ]; 
@@ -121,7 +121,7 @@ export const LessonButtons = () => {
                 ))}
 
             </Box>
-            <LessonButtonsGames />
+            <LessonVocabulary />
         </>
     );
 };

@@ -157,7 +157,7 @@ export const PrimarySearchNavbar = () => {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton
+                    {/* <IconButton
                         size="large"
                         edge="start"
                         color="inherit"
@@ -165,10 +165,10 @@ export const PrimarySearchNavbar = () => {
                         sx={{ mr: 1 }}
                     >
                         <MenuIcon />
-                    </IconButton>
+                    </IconButton> */}
 					<Avatar
                         alt="main-logo"
-						src="../images/my_logo.png"
+						src="https://placekitten.com/200/300"
                         sx={{ mr: 2 }}
 					/>					
 					<Search>
@@ -184,15 +184,15 @@ export const PrimarySearchNavbar = () => {
                     <Box sx={{ flexGrow: 1}} />
                     <Box sx={{ display: { xs: "none", md: "flex" } }}>
                         
-						<Button variant="text" sx={{color: "#fff"}}>
+						{/* <Button variant="text" sx={{color: "#fff"}}>
 							Lesssons	
-						</Button>
-						<Button variant="text" sx={{color: "#fff"}}>
+						</Button> */}
+						{/* <Button variant="text" sx={{color: "#fff"}}>
 							Our team	
-						</Button>
-						<Button variant="text" sx={{color: "#fff"}}>
+						</Button> */}
+						{/* <Button variant="text" sx={{color: "#fff"}}>
 							Blog	
-						</Button>
+						</Button> */}
 						
                         <IconButton
                             size="large"
